@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <meta name="author" content="Santi Resa">
+    <style>
+        body{
+            background-color: #CCCC66;
+        }
+        .tabla{
+            display: table;
+        }
+        .fila{
+            display: table-row;
+        }
+        .columnaIzquierda{
+            display: table-cell;
+            width: 20%;
+        }
+        .columnaDerecha{
+            display: table-cell;
+            width: 70%;
+        }
+        .iframe1{
+            height: 600px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.gif" alt="logo">
+        <img src="img/banner.gif" alt="banner">
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <div class="indice">
+                        <ul>
+                            <li><a href="inicial.html" target="frame1">Inicio</a></li>
+                            <li><a href="cultivo.html" target="frame1">Cultivo</a></li>
+                            <li><a href="tipos.html" target="frame1">Tipos</a></li>
+                            <li><a href="preparacion.html" target="frame1">Preparacion</a></li>
+                            <li><a href="contacto.html" target="frame1">Contacto</a></li>
+                        </ul>
+                        <img src="img/grano.gif" alt="grano" class="grano">
+                    </div>
+                    <img src="img/fotos.png" alt="fotos">
+                </td>
+                <td class="columnaDerecha">
+                    <iframe class="iframe1" name="frame1" src="inicial.html" sandbox="allow-forms allow-same-origin allow-scripts allow-popups"></iframe>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+</body>
+</html>
