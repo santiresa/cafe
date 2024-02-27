@@ -1,0 +1,138 @@
+$color_1: white;
+$color_2: #261E59;
+$font-family_1: "Roboto Mono", monospace;
+$font-family_2: "Allerta Stencil", sans-serif;
+$background-color_1: #E8E9F3;
+$background-color_2: #261E59;
+
+/*Versión movil*/
+@charset "utf-8";
+@import "https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap";
+/*Versión PC*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-family_1;
+}
+html {
+	background-color: $background-color_1;
+}
+body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "hed" "mai" "foo";
+	width: 100%;
+	height: 100%;
+}
+header {
+	background-color: $background-color_2;
+	text-align: center;
+	grid-area: hed;
+	font-size: 3vh;
+	ul {
+		li {
+			a {
+				text-decoration: none;
+				color: $color_1;
+			}
+		}
+	}
+}
+main {
+	grid-area: mai;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "tit" "pcu" "pre" "pfu";
+	text-align: center;
+	font-size: 3vh;
+	>h1 {
+		grid-area: tit;
+		font-family: $font-family_2;
+		font-size: 6vh;
+		height: 50%;
+		color: $color_2;
+		margin-bottom: 3rem;
+	}
+	>section {
+		background-color: $background-color_2;
+		padding: 0rem 0;
+		margin: 1rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 15vh;
+		>a {
+			text-decoration: none;
+			color: $color_1;
+			display: block;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		>h2 {
+			color: $color_1;
+		}
+	}
+}
+footer {
+	grid-area: foo;
+	background-color: $background-color_2;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: none;
+	ul {
+		li {
+			a {
+				text-decoration: none;
+				color: $color_1;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-evenly;
+			li {
+				margin: 0 1rem 0 1rem;
+				a {
+					display: block;
+					padding: 1.2em 0;
+				}
+			}
+		}
+	}
+	main {
+		font-size: 5vh;
+		height: calc(100vh - 20vh);
+	}
+	footer {
+		display: block;
+		height: 10%;
+		font-size: 3vh;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-evenly;
+			li {
+				margin: 0 1rem 0 1rem;
+				a {
+					display: block;
+					padding: 1.2em 0;
+				}
+			}
+		}
+	}
+}

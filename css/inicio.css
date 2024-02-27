@@ -1,0 +1,23 @@
+@charset "utf-8";
+main>section#curso{
+    margin-top: -2rem;
+    grid-area: pcu;
+    background-image: url("../img/curso.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    
+}
+
+main>section#realizados{
+    grid-area: pre;
+    background-image: url("../img/realizados.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
+
+main>section#futuro{
+    grid-area: pfu;
+    background-image: url("../img/futuro.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
